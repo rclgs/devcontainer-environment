@@ -1,0 +1,31 @@
+{
+  "name": "Dev Container Environment",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "25",
+      "installMaven": "false",
+      "installGradle": "false"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "24"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.14"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions":[
+        "vscjava.vscode-java-pack",
+        "dbaeumer.vscode-eslint",
+        "ms-python.python"
+      ]
+    }
+  }
+}
